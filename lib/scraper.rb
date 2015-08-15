@@ -15,6 +15,3 @@ class Scraper
     end
   end
 end
-
-# this works and inserts all pokemon into the pokemon table in pokemon.db
-# Scraper.new(SQLite3::Database.new('db/pokemon.db')).scrape

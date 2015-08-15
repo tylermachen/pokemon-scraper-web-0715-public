@@ -54,19 +54,19 @@ describe "Pokemon" do
       @sql_runner.execute_create_hp_column
     end
 
-    xit "knows that a pokemon have a default hp of 60" do
+    it "knows that a pokemon have a default hp of 60" do
       expect(@db.execute("SELECT hp FROM pokemon LIMIT 1;").flatten.first).to eq(60)
     end
 
     # So Ian and you have decided to battle.  He chose Magikarp (rookie mistake), and you chose Pikachu.
     # He used splash. It wasn't very effective. It did one damage.
-    xit "alters Pikachu's hp to 59" do
+    it "alters Pikachu's hp to 59" do
       pikachu.alter_hp(59)
       expect(@db.execute("SELECT hp FROM pokemon WHERE name = 'Pikachu';").flatten.first).to eq(59)
     end
 
     # Now we alter Magikarp's hp
-    xit "alters Magikarp's hp" do
+    it "alters Magikarp's hp" do
       magikarp.alter_hp(0)
       expect(@db.execute("SELECT hp FROM pokemon WHERE name = 'Magikarp';").flatten.first).to eq(0)
     end
