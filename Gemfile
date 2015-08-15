@@ -1,6 +1,5 @@
 source "https://rubygems.org"
 
-
 # Scraping
 gem 'nokogiri'
 
